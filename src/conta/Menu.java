@@ -3,6 +3,8 @@ package conta;
 import java.util.Scanner;
 
 import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 import conta.util.Cores;
 
 public class Menu {
@@ -11,7 +13,7 @@ public class Menu {
 		// TODO Auto-generated method stub
 		Scanner leia = new Scanner(System.in);
 		//TESTE CLASSE CONTA
-		Conta c1 = new Conta(123, 003, 22, "Matheus", 12000.00f);
+		Conta c1 = new Conta(123, 003, 22, "Matheus L.", 12000.00f);
 		c1.visualizar();
 		c1.sacar(999999f);
 		c1.visualizar();
@@ -20,6 +22,21 @@ public class Menu {
 		c1.sacar(300f);
 		c1.visualizar();
 
+		// Teste da Classe Conta Corrente
+		ContaCorrente cc1 = new ContaCorrente(124, 003, 24, "Fatmia J.", 0.0f, 1000.0f);
+		cc1.visualizar();
+		cc1.sacar(12000.0f);
+		cc1.visualizar();
+		cc1.depositar(5000.0f);
+		cc1.visualizar();
+		
+        // Teste da Classe Conta Poupança
+		ContaPoupanca cp1 = new ContaPoupanca(125, 003, 25, "Valmir Q.", 100000.0f, 15);
+		cp1.visualizar();
+        cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
 		
 		
 		int opcao;
