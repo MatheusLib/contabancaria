@@ -15,24 +15,22 @@ public class ContaCorrente extends Conta {
 	public void setLimite(float limite) {
 		this.limite = limite;
 	}
-	
+
 	@Override
 	public boolean sacar(float valor) {
-		if(this.getSaldo()+this.getLimite()< valor) {
+		if (this.getSaldo() + this.getLimite() < valor) {
 			System.out.println("\nSaldo insuficiente");
 			return false;
-		}
-		else {
-			this.setSaldo(this.getSaldo()- valor);
+		} else {
+			this.setSaldo(this.getSaldo() - valor);
 			return true;
 		}
 	}
-	
-    @Override
+
+	@Override
 	public void visualizar() {
 		super.visualizar();
-		System.out.println("Limite de crédito: "+this.limite);
+		System.out.println("Limite de crédito: " + this.limite);
 	}
-	
 
 }
